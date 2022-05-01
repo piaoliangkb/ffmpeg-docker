@@ -1,1 +1,1 @@
-docker build -t piaoliangkb/ffmpeg-base:nvidia-4.4 .
+docker build -t piaoliangkb/ffmpeg:nvidia-4.4 .
