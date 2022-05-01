@@ -31,7 +31,7 @@ RUN     apt-get -yqq update && \
 
 FROM  devel-base as build
 
-ENV        NVIDIA_HEADERS_VERSION=11.0.10.1
+ENV        NVIDIA_HEADERS_VERSION=11.1.5.0
 
 ENV         FFMPEG_VERSION=5.0.1 \
     AOM_VERSION=v1.0.0 \
@@ -620,8 +620,8 @@ LABEL       org.opencontainers.image.authors="julien@rottenberg.info" \
 
 ENV         LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64
 
-CMD         ["--help"]
-ENTRYPOINT  ["ffmpeg"]
+# CMD         ["--help"]
+# ENTRYPOINT  ["ffmpeg"]
 
 # copy only needed files, without copying nvidia dev files
 COPY --from=build /usr/local/bin /usr/local/bin/
